@@ -67,10 +67,6 @@ $("#addTrainBtn").on("click", function() {
       console.log(frequency);
   }
 
-
-    
-});
-
 //Figure out the train frequency calculations here
 //See it this works locally
 
@@ -84,3 +80,19 @@ $("#addTrainBtn").on("click", function() {
 //  min: minUntilTrain,
 //  next: nextTrain
 //  }
+
+//Access the firebase database
+
+//console.log(newTrain);
+//database.ref().push(newTrain);
+
+//Push the values
+//$("#trainNameInput").val("");
+//$("#destinationInput").val("");
+//$("#firstInput").val("");
+//$("#frequencyInput").val("");
+
+//return false;
+    
+});
+
