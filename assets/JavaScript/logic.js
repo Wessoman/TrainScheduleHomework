@@ -56,11 +56,11 @@ $("#addTrainBtn").on("click", function() {
       return false;
       console.log(destination);
   }
- // if (firstTrain == "") {
- //     alert('Enter a first train time.');
- //     return false;
- //     console.log(firstTrain);
- // }
+  if (firstTrain == "") {
+      alert('Enter a first train time.');
+      return false;
+      console.log(firstTrain);
+ }
   if (frequency == "") {
       alert('Enter a frequency');
       return false;
@@ -70,29 +70,36 @@ $("#addTrainBtn").on("click", function() {
 //Figure out the train frequency calculations here
 //See it this works locally
 
+var firstTrainConverted = moment(firstTrain, "hh:mm").subtract("1, years");
+// the time difference between current time and the first train
+var difference = currentTime.diff(moment(firstTrainConverted), "minutes");
+var remainder = difference % frequency;
+var minUntilTrain = frequency - remainder;
+var nextTrain = moment().add(minUntilTrain, "minutes").format("hh:mm a");
+
 // New Train? :
 
-//  var newTrain = {
-//  name: trainName,
-//  destination: destination,
-//  firstTrain: firstTrain,
-//  frequency: frequency,
-//  min: minUntilTrain,
-//  next: nextTrain
-//  }
+  var newTrain = {
+  name: trainName,
+  destination: destination,
+  firstTrain: firstTrain,
+  frequency: frequency,
+  min: minUntilTrain,
+  next: nextTrain
+  }
 
 //Access the firebase database
 
-//console.log(newTrain);
-//database.ref().push(newTrain);
+console.log(newTrain);
+database.ref().push(newTrain);
 
-//Push the values
-//$("#trainNameInput").val("");
-//$("#destinationInput").val("");
-//$("#firstInput").val("");
-//$("#frequencyInput").val("");
+Push the values
+$("#trainNameInput").val("");
+$("#destinationInput").val("");
+$("#firstInput").val("");
+$("#frequencyInput").val("");
 
-//return false;
+return false;
     
 });
 
