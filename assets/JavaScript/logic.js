@@ -19,6 +19,9 @@
 
 var database = firebase.database();
 
+//set clock to current time!
+var currentTime = moment();
+
 //Initial variable paramaters
 //Add child snapshots:
 database.ref().on("child_added", function(childSnap) {
@@ -93,7 +96,7 @@ var nextTrain = moment().add(minUntilTrain, "minutes").format("hh:mm a");
 console.log(newTrain);
 database.ref().push(newTrain);
 
-Push the values
+// Push the values
 $("#trainNameInput").val("");
 $("#destinationInput").val("");
 $("#firstInput").val("");
