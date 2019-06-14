@@ -1,0 +1,44 @@
+.container {
+     min-width: 800px;
+}
+
+.input-field {
+color: white;
+
+
+}
+
+table {
+    color: white;
+    background: blue;
+    opacity: 40%;
+}
+
+
+ body {
+        background: url('dreamtrain.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        opacity: 20% ;
+   }
+
+   .card-panel {
+    color: goldenrod;
+    
+    border-collapse: separate;
+    border-spacing: 6px;
+}
+
+.jumbotron {
+    background: url('weirdtrain.jpg') no-repeat center center;
+    
+    font-size: 100px;
+    color: red;
+    font-family: Anton, Georgia, 'Times New Roman', Times, serif
+    
+
+
+
+}
