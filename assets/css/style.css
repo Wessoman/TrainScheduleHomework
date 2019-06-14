@@ -1,5 +1,6 @@
 .container {
      min-width: 800px;
+     margin: 8px 8px;
 }
 
 .input-field {
@@ -33,12 +34,19 @@ table {
 
 .jumbotron {
     background: url('weirdtrain.jpg') no-repeat center center;
-    
-    font-size: 100px;
-    color: red;
+    border: 2px red;
+    font-size: 200px;
+    color: goldenrod;
     font-family: Anton, Georgia, 'Times New Roman', Times, serif
+
+
     
 
 
 
+}
+
+.center-align {
+
+    align-content: centerS
 }
